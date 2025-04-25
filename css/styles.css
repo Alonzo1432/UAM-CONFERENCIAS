@@ -1,0 +1,190 @@
+/* ========== RESET BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== TIPOGRAFÍA ========== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* ========== CONTENEDOR ========== */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* ========== HEADER Y NAV ========== */
+.site-header {
+  background: #0199a7;
+  color: #fff;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.site-header h1 {
+  font-size: 1.8rem;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* ========== SECCIÓN INFO (Inicio) ========== */
+#info-uam h2 {
+  color: #0199a7;
+  margin-top: 1.5rem;
+}
+#info-uam p {
+  margin-top: .5rem;
+}
+
+/* ========== CARRUSEL (Inicio) ========== */
+#carrusel {
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+  border-radius: 8px;
+  background: transparent;
+  height: 270px;
+}
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform .5s ease-in-out;
+}
+.slides img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(1,153,167,.8);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: .2rem .6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 2;
+}
+#prev { left: 1rem; }
+#next { right: 1rem; }
+
+/* ========== PÁGINA DE EVENTOS ========== */
+main .evento {
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+main .evento:hover {
+  transform: translateY(-4px);
+}
+main .evento h2 {
+  color: #0199a7;
+  margin-bottom: .75rem;
+}
+main .evento p {
+  margin-bottom: .5rem;
+  line-height: 1.4;
+}
+main .evento p strong {
+  color: #555;
+}
+
+/* ========== PÁGINA DE REGISTRO ========== */
+#form-registro {
+  background: #fff;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+#form-registro label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+#form-registro input,
+#form-registro select {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: .4rem;
+}
+#form-registro fieldset {
+  border: none;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+#form-registro legend {
+  font-size: 1rem;
+  color: #0199a7;
+  margin-bottom: .5rem;
+}
+#form-registro button {
+  background: #0199a7;
+  color: #fff;
+  border: none;
+  padding: .75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+#form-registro button:hover {
+  background: #017a8a;
+}
+#mensaje {
+  margin-top: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #d00; /* rojo por defecto */
+}
+
+/* ========== VALIDACIONES VISUALES ========== */
+#form-registro input:invalid,
+#form-registro select:invalid {
+  border: 2px solid #c00;
+}
+
+#form-registro input:valid,
+#form-registro select:valid {
+  border: 2px solid #0199a7;
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #e1e1e1;
+  font-size: .9rem;
+}
