@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro | UAM Conferencias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Registro de Asistentes</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="registro.html">Registro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="form-registro">
+      <label for="nombre">Nombre completo*</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo institucional*</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="carrera">Carrera*</label>
+      <select id="carrera" name="carrera" required>
+        <option value="">-- selecciona --</option>
+        <option>Ingeniería en Sistemas</option>
+        <option>Arquitectura</option>
+        <option>Otra</option>
+      </select>
+
+      <fieldset>
+        <legend>Conferencias*</legend>
+        <label><input type="checkbox" name="conf" value="GitHub" /> GitHub colaborativo</label>
+        <label><input type="checkbox" name="conf" value="Docker" /> Docker</label>
+        <label><input type="checkbox" name="conf" value="Linux" /> Servidores Linux</label>
+      </fieldset>
+
+      <button type="submit">Enviar registro</button>
+      <div id="mensaje"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <small>Facultad de Ingeniería y Arquitectura | Ingeniería en Sistemas de Información</small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
